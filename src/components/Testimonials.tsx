@@ -46,18 +46,16 @@ export default function Testimonials() {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
               onMouseEnter={() => setActiveIndex(index)}
-              className={`p-7 rounded-3xl transition-all duration-300 cursor-pointer ${
-                activeIndex === index
+              className={`p-7 rounded-3xl transition-all duration-300 cursor-pointer ${activeIndex === index
                   ? "bg-zinc-50 dark:bg-[#181818] border-zinc-400 dark:border-zinc-600 shadow-xl"
                   : "bg-white dark:bg-[#121212] border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-700"
-              } flex flex-col justify-between shadow-md`}
+                } flex flex-col justify-between shadow-md`}
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <FaQuoteLeft
-                    className={`text-2xl transition-colors duration-300 ${
-                      activeIndex === index ? "text-zinc-800 dark:text-zinc-200" : "text-zinc-400 dark:text-zinc-600"
-                    }`}
+                    className={`text-2xl transition-colors duration-300 ${activeIndex === index ? "text-zinc-800 dark:text-zinc-200" : "text-zinc-400 dark:text-zinc-600"
+                      }`}
                   />
                   <div className="flex items-center gap-1 text-amber-500">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -67,17 +65,17 @@ export default function Testimonials() {
                 </div>
 
                 <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed mb-6 font-normal italic">
-                  &ldquo;{testimonial.quote}&rdquo;
+                  &ldquo;{testimonial.content}&rdquo;
                 </p>
               </div>
 
               <div className="flex items-center justify-between pt-4 border-t border-zinc-200 dark:border-zinc-800">
                 <div>
                   <h4 className="text-sm font-bold text-zinc-950 dark:text-white">
-                    {testimonial.author}
+                    {testimonial.name}
                   </h4>
                   <p className="text-xs text-zinc-600 dark:text-zinc-400 font-medium">
-                    {testimonial.role} • {testimonial.company}
+                    {testimonial.role}
                   </p>
                 </div>
 
